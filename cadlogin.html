@@ -1,0 +1,178 @@
+
+<div class="col-sm-9" id=log style="display: none;"> 
+      <div class="alert alert-success alert-dismissible" id="sucesso" style="display: none;">
+  <strong>Sucesso!</strong> Cadastro realizado com sucesso.
+  <button class="close" data-dismiss="alert">&times;</button>
+</div>
+<div class="alert alert-danger alert-dismissible" id="erro" style="display: none;">
+  <strong>Erro!</strong> Preencha o campo corretamente.
+  <button class="close" data-dismiss="alert">&times;</button>
+</div>
+      <h4><small>MEU PERFIL</small></h4>
+      <hr>
+      <h2>Login</h2>
+    <form class="form-horizontal" id="flogin" action="#">
+      
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email :</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" placeholder="Email" required="required">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Senha :</label>
+    <div class="col-sm-10"> 
+      <input type="password" class="form-control" id="pwd1" placeholder="Senha" required="required">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label><input type="checkbox">Manter conectado</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" onclick="validarlogin()" class="btn btn-default" id="bentrar">Entrar</button>
+    </div>
+  </div>
+</form>
+</div>
+<div class="col-sm-9" id=cad style="display: none;">
+  <div class="alert alert-success alert-dismissible" id="sucessoc" style="display: none;">
+  <strong>Sucesso!</strong> Cadastro realizado com sucesso.
+  <button class="close" data-dismiss="alert">&times;</button>
+</div>
+<div class="alert alert-danger alert-dismissible" id="erroc" style="display: none;">
+  <strong>Erro!</strong> Preencha o campo corretamente.
+  <button class="close" data-dismiss="alert">&times;</button>
+</div>
+  <h4><small>MEU PERFIL</small></h4>
+      <hr>
+      <h2>Cadastro</h2>
+<form class="form-horizontal" id="fcadastro" action="">
+  <div class="form-group">
+        <label for="nome">Nome completo : </label>
+        <input class="form-control" id="nome" type="text" value="" name="nome" pattern="[a-zA-Z\s]+$" title="" placeholder="Nome Completo" required="required">
+</div>
+  <div class="form-check">
+    <label>Sexo :</label><br>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Masculino
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Feminino
+  </label>
+</div>
+<div class="form-group"><label>Celular : </label>
+  <input class="form-control" type="number" name="celular" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" placeholder="Telefone Celular">
+</div>
+  <div class="form-group">
+   <label>RG : </label>
+   <input class="form-control" type="number" name="rg" size="13" maxlength="13" pattern="[0-9]+$" placeholder="RG">
+      </div>
+    <div div class="form-group">
+    <label>CPF : </label>
+    <input class="form-control" id="cpf" type="number" name="cpf"  size="11" maxlength="11" placeholder="CPF" required="required">
+  </div>
+   <div class="form-group">
+     <label> Data de nasc : </label>
+     <input class="form-control" type="date" name="nasc" placeholder="Data de Nascimento">
+      </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Estado :</label>
+    <select class="form-control" id="estado" required="required">
+                                    <option value="ac">Acre</option> 
+                                    <option value="al">Alagoas</option> 
+                                    <option value="am">Amazonas</option> 
+                                    <option value="ap">Amapa</option> 
+                                    <option value="ba">Bahia</option> 
+                                    <option value="ce">Ceara</option> 
+                                    <option value="df">Distrito Federal</option> 
+                                    <option value="es">Esperito Santo</option> 
+                                    <option value="go">Goias</option> 
+                                    <option value="ma">Maranhao</option> 
+                                    <option value="mt">Mato Grosso</option> 
+                                    <option value="ms">Mato Grosso do Sul</option> 
+                                    <option value="mg">Minas Gerais</option> 
+                                    <option value="pa">Para</option> 
+                                    <option value="pb">Paraiba</option> 
+                                    <option value="pr">Parana</option> 
+                                    <option value="pe">Pernambuco</option> 
+                                    <option value="pi">Piaua</option> 
+                                    <option value="rj">Rio de Janeiro</option> 
+                                    <option value="rn">Rio Grande do Norte</option> 
+                                    <option value="ro">Rondania</option> 
+                                    <option value="rs">Rio Grande do Sul</option> 
+                                    <option value="rr">Roraima</option> 
+                                    <option value="sc">Santa Catarina</option> 
+                                    <option value="se">Sergipe</option> 
+                                    <option value="sp">Sao Paulo</option> 
+                                    <option value="to">Tocantins</option> 
+
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Cidade :</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+                                    <option value="ar">Araguari</option> 
+                                    <option value="udi">Uberlandia</option> 
+                                    <option value="ub">Uberaba</option> 
+                                    <option value="cn">Caldas Novas</option> 
+                                  </select>
+                                </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Estado Civil :</label>
+    <select class="form-control" id="exampleFormControlSelect2">
+      <option>Solteiro</option>
+      <option>Casado</option>
+      <option>Divorciado</option>
+      <option>Viuvo</option>
+    </select>
+  </div>
+    <div class="form-group">
+     <label> CEP : </label>
+      <input class="form-control" type="number" name="cep" size="8" maxlength="8" placeholder="CEP">
+       </div>
+    <div class="form-group">
+    <label> Numero : </label>
+      <input class="form-control" type="number" name="numero" size="4" maxlength="4" placeholder="Numero da Casa">
+         </div>
+         <div class="form-group">
+  <label> Rua : </label> 
+    <input class="form-control" type="text" placeholder="Rua">
+ </div>
+     <div class="form-group">
+      <label > Complemento : </label>
+       <input class="form-control" type="text" name="complemento" placeholder="Complemento">
+        </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Email :</label>
+    <input type="email" id="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com" required="required">
+  </div>
+  <div class="form-group">
+   <label for="login">Nome de Usuario : </label>
+     <input class="form-control" type="text" name="login" placeholder="Nome de Usuario">
+</div>
+<div class="form-group">
+    <label for="pwd">Senha :</label>
+      <input type="password" class="form-control" id="pwd2" placeholder="Senha" required="required">
+    </div>
+    <div class="form-group">
+    <label for="pwd">Confirmar Senha :</label>
+      <input type="password" class="form-control" id="pwdc" placeholder="Confirmar Senha" required="required">
+    </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Foto de Perfil :</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+  <button type="submit" class="btn btn-primary" onclick="validarcadastro()" id="bsalvar">Salvar</button>
+</div>
+</form>
+	</div>
